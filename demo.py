@@ -17,10 +17,11 @@ WIDTH = args.width
 HEIGHT = args.height
 OUTPUT = args.output
 
+# 下面是我们的字符画所使用的字符集，一共有 70 个字符，字符的种类与数量可以自己根据字符画的效果反复调试
 ascii_char = list("$@B%8&WM#*oahkbdpqwmZO0QLCJUYXz~wdcvunxrjft/\|()1{}[]?-_+~<>i!lI;:,\"^`'. ")
 
 
-# 将256灰度映射到70个字符上
+# 将256灰度映射到字符上(RGB转字符)
 def get_char(r, g, b, alpha=256):
     if alpha == 0:
         return ' '
